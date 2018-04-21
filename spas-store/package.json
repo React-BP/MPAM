@@ -19,6 +19,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "aos": "^2.2.0",
     "async": "^2.6.0",
     "axios": "^0.16.2",
     "bcrypt-nodejs": "0.0.3",
@@ -27,6 +28,8 @@
     "mysql2": "^1.5.3",
     "nodemon": "^1.17.3",
     "path": "^0.12.7",
+    "radium": "^0.24.0",
+    "react-page-scroller": "^1.2.0",
     "react-router-dom": "^4.1.2",
     "sequelize": "^4.37.6",
     "sweet-alert": "^1.0.1"
