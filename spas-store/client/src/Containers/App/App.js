@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Radium from "radium";
 import ReactPageScroller from "react-page-scroller";
 import AOS from 'aos';
+import axios from 'axios';
 
 //Importing Components
 //Navbar/Sidebar component
@@ -37,6 +38,11 @@ class App extends Component {
   //REFRESHES WHEN COMPONENT MOUNTS
   componentDidMount() {
     AOS.refresh();
+    axios.get(`/api/clothing`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
   }
 
   //GOES TO SPECIFIC PAGE ON SELECT
@@ -46,13 +52,23 @@ class App extends Component {
 
   //GRABS PAGE NUMBER ON PAGE CHANGE
   pageOnChange = (number) => {
-    if (number === 0) {
+
+    console.log('pageOnChange number: ', number)
+
+    console.log('Pre-check:', this.state.showMe);
+
+    if (number === 0 || number <= 1) {
       this.setState({ showMe: false });
+      console.log('Post-check:', this.state.showMe);
     } else {
       this.setState({ showMe: true });
+      console.log('Post-check:', this.state.showMe);
     }
+
     this.setState({ currentPage: number });
   };
+
+
 
   render() {
 
@@ -85,9 +101,9 @@ class App extends Component {
         <div style={styles.scrl}></div>
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Front />
-          <Home />
-          <About />
-          <Contact />
+          <Home /> {/* Store Page */}
+          <About /> {/* Extra store page */}
+          <Contact /> {/* Contact and Support (Link to Twitter, Facebook, etc...) */}
         </ReactPageScroller>
         {
           this.state.showMe ?

@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var db = require("./client/src/Models/index");
-const routes = require("./routes/api-routes.js");
+const db = require("./Models");
+// const routes = require("./routes/api-routes.js");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
 
 db.sequelize.sync({ force: true }).then(function () {

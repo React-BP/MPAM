@@ -1,3 +1,6 @@
+var Sequelize = require('sequelize');
+var sequelize = require('../Models/index'); 
+
 module.exports = function(sequelize, DataTypes) {
     const Swag = sequelize.define('swag', {
         title: Sequelize.STRING,

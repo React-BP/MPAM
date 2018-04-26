@@ -1,6 +1,9 @@
 import React from "react";
 import Radium from 'radium';
 
+//Import pictures from Images folder
+import pic from '../../Images/smthstpd.png'
+
 let Front = (props) => {
     let styles = {
         grid: {
@@ -21,19 +24,16 @@ let Front = (props) => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            padding: '15px',
             width: '600px',
             height: '100%',
             borderTopLeftRadius: '20px',
             borderTopRightRadius: '20px',
         },
         phImg: {
-            backgroundImage: `url(${null})`,
-            backgroundSize: 'cover',
-            transform: 'rotate(90deg)',
-            border: '2px solid white',
-            width: '150px',
-            height: '150px',
-            margin: 'auto',
+            width: '350px',
+            height: '300px',
+            // margin: '0 auto',
             borderRadius: '50%',
             justifySelf: 'center',
             alignSelf: 'center',
@@ -75,13 +75,11 @@ let Front = (props) => {
 
     return (
         <div style={styles.grid}>
-            <div style={styles.photo}><div style={styles.phImg}></div></div>
+            <div style={styles.photo}><div style={styles.phImg}><img src={pic} style={{width: '100%', height: '100%'}}/></div></div>
             <div style={styles.about}>
-                Matt Groe <br />
-                Web Developer <br />
+                Reggae Band <br />
                 San Diego, CA <br />
-                <a key='1' style={styles.links} href="https://www.linkedin.com/in/matthew-groe-b0a742162/">LinkedIn</a> <br />
-                <a key='2' style={styles.links} href="https://github.com/mattgroe">GitHub</a>
+                <a key='1' style={styles.links} href="http://slightlystoopid.com/">Website</a> <br />
             </div>
         </div>
     );
