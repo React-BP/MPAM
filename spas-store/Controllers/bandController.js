@@ -4,10 +4,10 @@ const sequelize = require('sequelize');
 // Defining methods for the booksController
 module.exports = {
     findAll: function (req, res) {
-        db.sequelize.query("SELECT * FROM `Swags`", { type: db.sequelize.QueryTypes.SELECT })
+        db.sequelize.query("SELECT * FROM swags", { type: db.sequelize.QueryTypes.SELECT })
             .then(swag => {
                 // We don't need spread here, since only the results will be returned for select queries
-                console.log('here are all the swags ', swag);
+                res.json({success:true, swag:swag});
             })
     },
     findById: function (req, res) {

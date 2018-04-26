@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const bandController = require("../../Controllers/bandController");
 
-router.route("/clothing")
-    .get(modelController.findAll);
+
+router.route("/items")
+    .get(bandController.findAll);
 
 // router.route("/store/:type")
 //     .get(modelController.findItems);

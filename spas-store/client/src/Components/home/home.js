@@ -34,13 +34,13 @@ const Home = (props) => {
 
     return (
 
-        <div style={styles.grid}>
-            <div style={styles.itemA}>Providing you a life-line</div>
-            {/* <object style={styles.itemB}>
-                <embed src={MyLogo} style={{ height: "70%", width: "100%" }} />
-            </object> */}
-            <div style={styles.itemC}>in Web Innovation</div>
-        </div>
+        // <div style={styles.grid}>
+        //     <div style={styles.itemA}>Providing you a life-line</div>
+                <div>
+                    {props}
+                </div>
+        //     <div style={styles.itemC}>in Web Innovation</div>
+        // </div>
 
     );
 };

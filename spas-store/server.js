@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./Models");
-// const routes = require("./routes/api-routes.js");
+const routes = require("./routes/");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 // Serve up static assets
 app.use(express.static("client/build"));
 // Add routes, both API and view
-// app.use(routes);
+ app.use(routes); //test
 
 
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync({ force: false }).then(function () {
     // Start the API server
     app.listen(PORT, function () {
         console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

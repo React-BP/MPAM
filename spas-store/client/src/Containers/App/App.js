@@ -28,7 +28,7 @@ class App extends Component {
   //SUPER PROPS
   constructor(props) {
     super(props);
-    this.state = { currentPage: 0, showMe: false };
+    this.state = { currentPage: 0, showMe: false, items:[] };
     this._pageScroller = null;
     AOS.init({
       duration: 1200
@@ -38,11 +38,12 @@ class App extends Component {
   //REFRESHES WHEN COMPONENT MOUNTS
   componentDidMount() {
     AOS.refresh();
-    axios.get(`/api/clothing`)
+    axios.get(`/api/items`)
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
+        console.log('res ', res);
+        const items = res.data;
+        this.setState({ items: items });
+      }) 
   }
 
   //GOES TO SPECIFIC PAGE ON SELECT
@@ -101,7 +102,7 @@ class App extends Component {
         <div style={styles.scrl}></div>
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Front />
-          <Home /> {/* Store Page */}
+          <Home items={this.state.items} /> {/* Store Page */}
           <About /> {/* Extra store page */}
           <Contact /> {/* Contact and Support (Link to Twitter, Facebook, etc...) */}
         </ReactPageScroller>
