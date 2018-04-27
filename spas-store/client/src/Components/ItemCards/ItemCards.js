@@ -5,23 +5,26 @@ import Button from '../UI/Button/button';
 const ItemCards = (props) => {
     const style={
         image:{
-            height: 185,
-            width:185,
-            margin: 5
+            height: '100px',
+            width: '100px',
+            margin: '5px'
+        },
+        card: {
+            width: '300px',
+            marginLeft: '20px',
+            marginRight: '20px'
         }
     }
 
-    console.log('props... ', props);
-
     return (
-        <div className={classes.card}>
+        <div className={classes.card} id={props.itemName} style={style.card}>
             <div className={classes.imgCont}>
-                <img alt={props.itemName} src={props.itemName} style={style.image}/>
+                <img alt={props.itemName} src={props.itemPic} style={style.image}/>
             </div>
             <div className={classes.itemInfo}>
-                <h3>{props.itemName}</h3>
-                <h5>{props.ItemTitle}</h5>
-                <p>Price: {props.price}</p>
+                <div>{props.itemName}</div>
+                <div>{props.ItemTitle}</div>
+                <div>Price: {props.price}</div>
                 <Button btnType='View' clicked={props.onClick}>View</Button>
             </div>
             

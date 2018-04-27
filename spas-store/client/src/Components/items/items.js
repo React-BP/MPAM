@@ -25,7 +25,7 @@ class Items extends Component {
         this.loadItem(id);
         console.log(this.state.featured);
     }
-    
+
     modalCancelHandler = () => {
         this.setState({ itemModal: false });
     }
@@ -79,14 +79,14 @@ class Items extends Component {
                     image={wetImg}
                     title='Wetsuits' />
                 <Filter /> */}
-                <div className={classes.ItemBox}>
+                <div className={classes.ItemBox} id='flex' style={{display: 'flex', flexDirection: 'row', width: '90%', flexWrap: 'wrap'}}>
                     {this.state.items.map(item => (
                         <ItemCards
                             key={item.id}
                             price={item.price}
                             ItemTitle={item.type}
                             itemName={item.title}
-                            // itemPic={item.image}
+                            itemPic={item.image}
                             onClick={this.modalHandler}
                         />
                     ))}

@@ -7,30 +7,19 @@ const Home = (props) => {
     let styles = {
         grid: {
             display: "grid",
-            gridTemplateAreas: "'. a a a' '. a a a' '. a a a'",
+            gridTemplateAreas: "'. a a a'",
+            marginLeft: '20%',
             height: "100%",
-            justifyContent: "center",
-            alignSelf: "center"
+            width: '100%'
         },
         itemA: {
-            gridArea: "a",
-            alignSelf: "end",
-            justifySelf: "start",
-            fontSize: "24px"
-        },
-        itemB: {
-            gridArea: "b",
-            margin: "0",
-            alignSelf: "center",
-            justifySelf: "end",
-            height: "50%",
-            width: "100%"
-        },
-        itemC: {
-            gridArea: "c",
-            alignSelf: "start",
-            justifySelf: "end",
-            fontSize: "24px"
+            // gridArea: "a",
+            // alignSelf: "start",
+            // justifySelf: "start",
+            width: '80vw',
+            fontSize: "18px",
+            marginTop: '100px',
+            marginBottom: '100px'
         }
     };
 
