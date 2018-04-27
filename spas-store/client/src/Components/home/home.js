@@ -1,11 +1,13 @@
 import React from "react";
 import 'aos/dist/aos.css';
 
+import Items from '../items/items';
+
 const Home = (props) => {
     let styles = {
         grid: {
             display: "grid",
-            gridTemplateAreas: "'a a a a' 'b b b b' 'c c c c'",
+            gridTemplateAreas: "'. a a a' '. a a a' '. a a a'",
             height: "100%",
             justifyContent: "center",
             alignSelf: "center"
@@ -34,13 +36,11 @@ const Home = (props) => {
 
     return (
 
-        // <div style={styles.grid}>
-        //     <div style={styles.itemA}>Providing you a life-line</div>
-                <div>
-                    {props}
-                </div>
-        //     <div style={styles.itemC}>in Web Innovation</div>
-        // </div>
+        <div style={styles.grid}>
+            <div style={styles.itemA}>
+                <Items></Items>
+            </div>
+        </div>
 
     );
 };

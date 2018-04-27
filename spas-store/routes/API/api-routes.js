@@ -8,7 +8,7 @@ router.route("/items")
 // router.route("/store/:type")
 //     .get(modelController.findItems);
 
-// router.route("/:id")
-//     .get(modelController.findItem);
+router.route("/:id")
+    .get(bandController.findById);
 
 module.exports = router;
