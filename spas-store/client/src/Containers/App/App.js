@@ -38,12 +38,12 @@ class App extends Component {
   //REFRESHES WHEN COMPONENT MOUNTS
   componentDidMount() {
     AOS.refresh();
-    axios.get(`/api/items`)
-      .then(res => {
-        console.log('res ', res);
-        const items = res.data;
-        this.setState({ items: items });
-      }) 
+    // axios.get(`/api/items`)
+    //   .then(res => {
+    //     console.log('res ', res);
+    //     const items = res.data;
+    //     this.setState({ items: items });
+    //   }) 
   }
 
   //GOES TO SPECIFIC PAGE ON SELECT
@@ -102,8 +102,7 @@ class App extends Component {
         <div style={styles.scrl}></div>
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Front />
-          <Home items={this.state.items} /> {/* Store Page */}
-          <About /> {/* Extra store page */}
+          <Home /> {/* Store Page */}
           <Contact /> {/* Contact and Support (Link to Twitter, Facebook, etc...) */}
         </ReactPageScroller>
         {
