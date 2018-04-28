@@ -80,6 +80,7 @@ let Front = (props) => {
                 Reggae Band <br />
                 San Diego, CA <br />
                 <a key='1' style={styles.links} href="http://slightlystoopid.com/">Website</a> <br />
+                <div>See our merch below!</div>
             </div>
         </div>
     );

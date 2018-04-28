@@ -11,6 +11,7 @@ import axios from 'axios';
 class Items extends Component {
     state = {
         items: [],
+        singleItem: '',
         loading: true,
         featured: {},
         itemModal: false
@@ -21,6 +22,7 @@ class Items extends Component {
     }
 
     modalHandler = (id) => {
+        console.log('hitting this')
         this.setState({ itemModal: true });
         this.loadItem(id);
         console.log(this.state.featured);
@@ -41,17 +43,13 @@ class Items extends Component {
                         id: key
                     });
                 }
-                console.log('fetched ', fetched)
                 this.setState({
                     loading: false,
                     items: fetched
                 });
-                console.log('this.state.items ', this.state.items);
             }).catch(err => {
                 this.setState({ loading: false });
             }); 
-
-            console.log('this.state.items ', this.state.items);
         // API.searchItems('wetsuits')
         //     .then(res => {
 
@@ -62,6 +60,23 @@ class Items extends Component {
     }
 
     loadItem(id) {
+        axios.get(`/api/${id}`)
+            .then(res => {
+                console.log('res ', res);
+                const fetched = '';
+                // for (let key in res.data) {
+                //     fetched.push({
+                //         ...res.data[key],
+                //         id: key
+                //     });
+                // }
+                this.setState({
+                    loading: false,
+                    singleItem: fetched
+                });
+            }).catch(err => {
+                this.setState({ loading: false });
+            });
         // API.searchItem(id)
         //     .then(res => {
         //         this.setState({
@@ -87,15 +102,15 @@ class Items extends Component {
                             ItemTitle={item.type}
                             itemName={item.title}
                             itemPic={item.image}
-                            onClick={this.modalHandler}
+                            modalHandler={this.modalHandler}
                         />
                     ))}
                 </div>
                 <Modal show={this.state.itemModal}
                     modalClosed={this.modalCancelHandler}>
-                    <SingleItem singleItemPic={this.state.featured.image}
-                        singlePicInfo={this.state.featured.name}
-                        sizes={this.state.featured.sizes} />
+                    <SingleItem singleItemPic={this.state.singleItem.image}
+                        singlePicInfo={this.state.singleItem.name}
+                        sizes={this.state.singleItem.sizes} />
                 </Modal>
 
             </div>
