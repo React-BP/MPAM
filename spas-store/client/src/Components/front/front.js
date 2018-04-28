@@ -18,7 +18,6 @@ let Front = (props) => {
         },
         photo: {
             gridArea: "photo",
-            backgroundColor: 'rgba(0,0,0,0.30)',
             justifySelf: 'center',
             alignSelf: 'center',
             display: 'flex',
@@ -27,6 +26,7 @@ let Front = (props) => {
             padding: '15px',
             width: '600px',
             height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.30)',
             borderTopLeftRadius: '20px',
             borderTopRightRadius: '20px',
         },

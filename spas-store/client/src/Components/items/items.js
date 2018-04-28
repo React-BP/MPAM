@@ -89,12 +89,14 @@ class Items extends Component {
 
     render() {
         return (
-            <div className={classes.mainBox}>
+            <div className={classes.mainBox} style={{
+                marginRight: '10%', backgroundColor: 'rgba(0,0,0,0.30)',
+                borderRadius: '20px',}}>
                 {/* <Header
                     image={wetImg}
                     title='Wetsuits' />
                 <Filter /> */}
-                <div className={classes.ItemBox} id='flex' style={{display: 'flex', flexDirection: 'row', width: '90%', flexWrap: 'wrap'}}>
+                <div className={classes.ItemBox} id='flex' style={{display: 'flex', flexDirection: 'row', width: '100%', flexWrap: 'wrap'}}>
                     {this.state.items.map(item => (
                         <ItemCards
                             key={item.id}

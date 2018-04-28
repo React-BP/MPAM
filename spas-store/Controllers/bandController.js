@@ -11,10 +11,10 @@ module.exports = {
             })
     },
     findById: function (req, res) {
-        db.sequelize.query("SELECT * FROM swags WHERE id = '$id'", { type: db.sequelize.QueryTypes.SELECT })
+        db.sequelize.query("SELECT * FROM swags WHERE id", { type: db.sequelize.QueryTypes.SELECT })
             .then(item => {
                 // We don't need spread here, since only the results will be returned for select queries
-                res.json(swag);
+                res.json(item);
             })
     },
     create: function (req, res) {
