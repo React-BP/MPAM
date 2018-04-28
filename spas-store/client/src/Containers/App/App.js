@@ -103,7 +103,7 @@ class App extends Component {
         <div style={styles.scrl}></div>
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Front />
-          <Home /> {/* Store Page */}
+          <Home />
           <Contact />
         </ReactPageScroller>
         {

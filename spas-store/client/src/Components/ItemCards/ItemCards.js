@@ -19,7 +19,7 @@ const ItemCards = (props) => {
     return (
         <div className={classes.card} id={props.itemName} style={style.card}>
             <div className={classes.imgCont}>
-                <img alt={props.itemName} src={props.itemPic} style={style.image}/>
+                <img src={require('../../Images/sst.jpg')} style={style.image}/>
             </div>
             <div className={classes.itemInfo}>
                 <div>{props.itemName}</div>

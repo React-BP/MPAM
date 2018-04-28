@@ -8,7 +8,6 @@ const Home = (props) => {
         grid: {
             display: "grid",
             gridTemplateAreas: "'. a a a'",
-            marginLeft: '20%',
             height: "100%",
             width: '100%'
         },
@@ -16,9 +15,10 @@ const Home = (props) => {
             // gridArea: "a",
             // alignSelf: "start",
             // justifySelf: "start",
+            marginLeft: '20%',
             width: '80vw',
             fontSize: "18px",
-            marginTop: '100px',
+            marginTop: '25px',
             marginBottom: '100px'
         }
     };
