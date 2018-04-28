@@ -1,0 +1,23 @@
+{
+  "name": "spas",
+  "version": "1.0.0",
+  "description": "React boilerplate multiple page app using mongoose/mongoDB as database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/React-BP/SPAS-store.git"
+  },
+  "author": "Matt Groe Daniel Ward",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/React-BP/SPAS-store/issues"
+  },
+  "homepage": "https://github.com/React-BP/SPAS-store#readme",
+  "files":[
+      "spas-store",
+      "README.md" 
+  ]
+}

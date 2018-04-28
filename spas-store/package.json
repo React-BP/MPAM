@@ -4,7 +4,7 @@
   "description": "Single Page App Boilerplate webstore that utilizes sequelive/MYSQL",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently  \"npm run server\"  \"npm run client\"",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "build": "node scripts/build.js",
@@ -34,6 +34,7 @@
     "react-page-scroller": "^1.2.0",
     "react-router-dom": "^4.1.2",
     "sequelize": "^4.37.6",
-    "sweet-alert": "^1.0.1"
+    "sweet-alert": "^1.0.1",
+    "tar-pack": "^3.4.1"
   }
 }
