@@ -1,5 +1,5 @@
 {
-  "name": "spas-store",
+  "name": "spas",
   "version": "1.0.0",
   "description": "Single Page App Boilerplate webstore that utilizes sequelive/MYSQL",
   "main": "index.js",
