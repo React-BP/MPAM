@@ -22,6 +22,7 @@ import 'aos/dist/aos.css';
 
 //Images
 import cityblur from '../../Images/city-blur.jpg';
+import cityblur1 from '../../Images/city-blur-1.jpg';
 import scrollIcon from '../../Images/scroll-icon.png';
 
 class App extends Component {
@@ -76,7 +77,7 @@ class App extends Component {
     let styles = {
 
       app: {
-        backgroundImage: `url(${cityblur})`,
+        backgroundImage: `url(${cityblur1})`,
         backgroundSize: 'cover',
         color: "white"
       },
@@ -103,7 +104,7 @@ class App extends Component {
         <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
           <Front />
           <Home /> {/* Store Page */}
-          <Contact /> {/* Contact and Support (Link to Twitter, Facebook, etc...) */}
+          <Contact />
         </ReactPageScroller>
         {
           this.state.showMe ?

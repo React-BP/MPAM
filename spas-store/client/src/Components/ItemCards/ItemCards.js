@@ -25,7 +25,7 @@ const ItemCards = (props) => {
                 <div>{props.itemName}</div>
                 <div>{props.ItemTitle}</div>
                 <div>Price: {props.price}</div>
-                <Button btnType='View' clicked={props.onClick}>View</Button>
+                <Button btnType='View' onClick={() => props.modalHandler(props.key)}>View</Button>
             </div>
             
             

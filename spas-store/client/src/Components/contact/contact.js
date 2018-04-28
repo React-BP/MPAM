@@ -9,18 +9,28 @@ const Contact = (props) => {
 
     return (
         <div style={styles.body}>
-            <h1>Contact Page</h1>
-            <p>
-                Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis molestie urna.
-                Aliquam semper ultrices varius. Aliquam faucibus sit amet magna a ultrices. Aenean
-                pellentesque placerat lacus imperdiet efficitur. In felis nisl, luctus non ante euismod,
-                tincidunt bibendum mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-                posuere, eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque nec metus
-                vestibulum, egestas massa eu, sollicitudin ipsum. Nulla facilisi. Sed ut erat ligula. Nam
-                tincidunt nunc in nibh dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-                conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus. Etiam vel
-                condimentum magna, quis tempor nulla.
-            </p>
+            <h1>Contact Us</h1>
+            <div>
+                <div>Management: <div>Matt Phillips</div></div>
+                <div>management@slightlystoopid.com</div>
+                <div>P: <div>(310)559-8990</div></div>
+            </div>
+            <div>
+                <div>Booking:</div>
+                <div>stoopid@silverbackmusic.net</div>
+                <div>P: <div>(310)559-8990</div></div>
+            </div>
+            <div>
+                <div>Publicity: <div>Ken Weinstein, Emily Ginsberg</div></div>
+            </div>
+            <div>
+                <div href="http://slightlystoopid.com/">Tour Dates</div>
+                <div href="https://www.facebook.com/slightlystoopid/">Facebook</div>
+                <div href="https://twitter.com/slightlystoopid?lang=en">Twitter</div>
+                <div href="https://www.instagram.com/slightlystoopid/">Instagram</div>
+                <div href="https://www.youtube.com/user/SlightlyStoopidTV">Youtube</div>
+                <div href="https://open.spotify.com/artist/6MxlVTY6PmY8Nyn16fvxtb">Spotify</div>
+            </div>
         </div>
     );
 };
